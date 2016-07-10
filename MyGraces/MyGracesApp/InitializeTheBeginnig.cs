@@ -47,12 +47,6 @@ namespace MyGracesApp
             }
         }
 
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    // MessageBox.Show(this.FirstHeroNameTBox.Text);
-
-        //}
-
         private void NextForm_Click(object sender, EventArgs e)
         {
             StartEngine();

@@ -4,11 +4,17 @@
     using System.Collections.Generic;
     using Interfaces;
     using Classes;
+    using Classes.Items;
+
     using System.Windows.Forms;
+    using Enumerations;
+
     public abstract class Hero : IHeroable
     {
         private int codingSpeed;
         private string name;
+        private int power;
+        private int energy;
 
         public Hero(string name)
         {
@@ -17,7 +23,22 @@
             this.Items = new List<IItemable>();
         }
 
-        public int Energy { get; protected set; }
+        public int Energy
+        {
+            get
+            {
+                int energyBonus = 0;
+                foreach (var item in this.Items)
+                {
+                    energyBonus += item.EnergyBonus;
+                }
+                return this.energy + energyBonus;
+            }
+            protected set
+            {
+                this.energy = value;
+            }
+        }
 
         public string Name
         {
@@ -42,7 +63,22 @@
             }
         }
 
-        public int Power { get; protected set; }
+        public int Power
+        {
+            get
+            {
+                int powerBonus = 0;
+                foreach (var item in this.Items)
+                {
+                    powerBonus += item.PowerBonus;
+                }
+                return this.power + powerBonus;
+            }
+            protected set
+            {
+                this.power = value;
+            }
+        }
 
         public int CodingSpeed
         {
@@ -58,31 +94,30 @@
 
         public int GeTInitialCodingSpeed()
         {
-           return this.Power * this.Energy;
+            return this.Power * this.Energy;
         }
 
         public IList<IItemable> Items { get; protected set; }
 
         public List<ISkillable> Skills { get; protected set; }
 
-        public void CalculateSkillEffect()
-        {
-            // TODO Change Energy, Power... Temporarely
-        }
+        //public void CalculateSkillEffect()
+        //{
+        //    // TODO Change Energy, Power... Temporarely
+        //}
 
-        public void CalculateItemEffect()
-        {
-            // TODO Change Energy, Power... permanently
-        }
+        //public void CalculateItemEffect()
+        //{
+        //    // TODO Change Energy, Power... permanently
+        //}
 
         public void AddItems(IItemable itemToAdd)
         {
-            //TODO 
+            this.Items.Add(itemToAdd);
         }
 
         public void AddSkills(ISkillable skillToAdd)
         {
-            //TODO 
             this.Skills.Add(skillToAdd);
         }
     }

@@ -14,11 +14,9 @@ namespace Interfaces
         int CodingSpeed { get;  set; }
         List<ISkillable> Skills { get; }
         IList<IItemable> Items { get; }
-
+        
         int GeTInitialCodingSpeed();
         void AddSkills(ISkillable skill);
         void AddItems(IItemable item);
-
-
     }
 }

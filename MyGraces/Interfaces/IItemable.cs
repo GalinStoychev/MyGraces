@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Interfaces
+﻿namespace Interfaces
 {
    public interface IItemable
     {
+        string Name { get; }
+        int PowerBonus { get; }
+        int EnergyBonus { get; }
     }
 }

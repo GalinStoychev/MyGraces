@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using Interfaces;
     using Skills;
+    using Items;
 
     public class HackDev : Hero, IHeroable
     {
@@ -15,6 +16,7 @@
 
             // TODO Add basic skills
             this.AddSkills(new PowerMode());
+            this.AddItems(new Coffee());
         }
     }
 }
