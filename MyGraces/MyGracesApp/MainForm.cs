@@ -86,13 +86,13 @@ namespace MyGracesApp
             }
             else if (increasedProgressBarPlayerOne > 1500)
             {
-                MessageBox.Show("Winner is Player Two");
                 this.PlayerTwoPBar.Value = 1500;
+                MessageBox.Show("Winner is Player Two");
             }
             else if (increasedProgressBarPlayerTwo > 1500)
             {
-                MessageBox.Show("Winner is Player One");
                 this.PlayerOnePBar.Value = 1500;
+                MessageBox.Show("Winner is Player One");
             }
             else
             {

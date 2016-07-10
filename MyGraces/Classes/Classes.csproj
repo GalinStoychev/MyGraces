@@ -45,7 +45,8 @@
     <Compile Include="CozyDev.cs" />
     <Compile Include="Draw.cs" />
     <Compile Include="Engine.cs" />
-    <Compile Include="Exceptions.cs" />
+    <Compile Include="IvalidNameException.cs" />
+    <Compile Include="HackDev.cs" />
     <Compile Include="Hero.cs" />
     <Compile Include="HeroFactory.cs" />
     <Compile Include="Items.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="Skills\Mesmerize.cs" />
     <Compile Include="Skills\PowerMode.cs" />
     <Compile Include="Skills\Skill.cs" />
+    <Compile Include="TelerikAcademyDev.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Enumerations\EnumerationsAndStructs.csproj">

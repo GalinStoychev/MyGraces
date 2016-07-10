@@ -3,10 +3,12 @@
     using System;
     using System.Collections.Generic;
     using Interfaces;
-
+    using Classes;
+    using System.Windows.Forms;
     public abstract class Hero : IHeroable
     {
         private int codingSpeed;
+        private string name;
 
         public Hero(string name)
         {
@@ -17,7 +19,28 @@
 
         public int Energy { get; protected set; }
 
-        public string Name { get; protected set; }
+        public string Name
+        {
+            get
+            {
+                return this.name;
+            }
+            protected set
+            {
+                try
+                {
+                    this.name = value;
+                    if (value.Length < 1 || value.Length > 15)
+                    {
+                        throw new IvalidNameException("Invalid Name: name must be between 1 and 15 charackters", 1, 15);
+                    }
+                }
+                catch (IvalidNameException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
 
         public int Power { get; protected set; }
 
@@ -61,11 +84,6 @@
         {
             //TODO 
             this.Skills.Add(skillToAdd);
-        }
-
-        public int GeTCodingSpeed()
-        {
-            throw new NotImplementedException();
         }
     }
 }
