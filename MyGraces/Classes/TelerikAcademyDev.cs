@@ -13,8 +13,7 @@
         {
             this.Energy = 15;
             this.Power = 9;
-
-            // TODO Add basic skills
+            
             this.AddSkills(new DecreaseOpponentEnergy());
             this.AddItems(new Mouse());
         }

@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-namespace Interfaces
+﻿namespace Interfaces
 {
+    using System.Collections.Generic;
+
     public interface IHeroable
     {
         string Name { get; }

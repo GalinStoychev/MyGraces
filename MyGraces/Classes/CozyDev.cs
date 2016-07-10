@@ -14,7 +14,6 @@
             this.Energy = 10;
             this.Power = 10;
 
-            // TODO Add basic skills
             this.AddSkills(new Mesmerize());
             this.AddItems(new ExternalKeyboard());
         }

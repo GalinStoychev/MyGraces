@@ -106,21 +106,21 @@
             int increasedProgressBarPlayerOne = this.PlayerOnePBar.Value + playerOne.CodingSpeed;
             int increasedProgressBarPlayerTwo = this.PlayerTwoPBar.Value + playerTwo.CodingSpeed;
 
-            if (increasedProgressBarPlayerOne > MaxLines && increasedProgressBarPlayerTwo > MaxLines)
+            if (increasedProgressBarPlayerOne >= MaxLines && increasedProgressBarPlayerTwo >= MaxLines)
             {
                 this.PlayerOnePBar.Value = MaxLines;
                 this.PlayerTwoPBar.Value = MaxLines;
                 MessageBox.Show("Draw");
             }
-            else if (increasedProgressBarPlayerOne > MaxLines)
+            else if (increasedProgressBarPlayerTwo >= MaxLines)
             {
                 this.PlayerTwoPBar.Value = MaxLines;
-                MessageBox.Show("Winner is Player Two");
+                MessageBox.Show(string.Format("Winner is {0}", this.NewEngine.AvailableHeroes[1].Name));
             }
-            else if (increasedProgressBarPlayerTwo > MaxLines)
+            else if (increasedProgressBarPlayerOne > MaxLines)
             {
                 this.PlayerOnePBar.Value = MaxLines;
-                MessageBox.Show("Winner is Player One");
+                MessageBox.Show(string.Format("Winner is {0}", this.NewEngine.AvailableHeroes[0].Name));
             }
             else
             {

@@ -34,7 +34,6 @@
             this.panelSecondTeamName = new System.Windows.Forms.Panel();
             this.panelTopBar = new System.Windows.Forms.Panel();
             this.lblCaption = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
             this.panelTeam1Body = new System.Windows.Forms.Panel();
             this.comboBox_PlayerOne = new System.Windows.Forms.ComboBox();
             this.POneName = new System.Windows.Forms.TextBox();
@@ -44,11 +43,16 @@
             this.PTwoName = new System.Windows.Forms.TextBox();
             this.comboBox_PlayerTwo = new System.Windows.Forms.ComboBox();
             this.panelTeam2Body = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelFirstTeamName.SuspendLayout();
             this.panelSecondTeamName.SuspendLayout();
             this.panelTopBar.SuspendLayout();
             this.panelTeam1Body.SuspendLayout();
             this.panelTeam2Body.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // canvasSeparator
@@ -107,24 +111,11 @@
             this.lblCaption.TabIndex = 1;
             this.lblCaption.Text = "PREPARE YOUR PLAYERS";
             // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Transparent;
-            this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
-            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExit.Location = new System.Drawing.Point(756, 2);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(55, 36);
-            this.btnExit.TabIndex = 0;
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // panelTeam1Body
             // 
             this.panelTeam1Body.BackColor = System.Drawing.Color.SteelBlue;
             this.panelTeam1Body.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelTeam1Body.Controls.Add(this.pictureBox1);
             this.panelTeam1Body.Controls.Add(this.comboBox_PlayerOne);
             this.panelTeam1Body.Controls.Add(this.POneName);
             this.panelTeam1Body.Location = new System.Drawing.Point(5, 150);
@@ -143,7 +134,7 @@
             "Teleric Academy Dev"});
             this.comboBox_PlayerOne.Location = new System.Drawing.Point(68, 82);
             this.comboBox_PlayerOne.Name = "comboBox_PlayerOne";
-            this.comboBox_PlayerOne.Size = new System.Drawing.Size(160, 37);
+            this.comboBox_PlayerOne.Size = new System.Drawing.Size(240, 37);
             this.comboBox_PlayerOne.TabIndex = 3;
             // 
             // POneName
@@ -211,13 +202,14 @@
             "Teleric Academy Dev"});
             this.comboBox_PlayerTwo.Location = new System.Drawing.Point(81, 82);
             this.comboBox_PlayerTwo.Name = "comboBox_PlayerTwo";
-            this.comboBox_PlayerTwo.Size = new System.Drawing.Size(160, 37);
+            this.comboBox_PlayerTwo.Size = new System.Drawing.Size(240, 37);
             this.comboBox_PlayerTwo.TabIndex = 5;
             // 
             // panelTeam2Body
             // 
             this.panelTeam2Body.BackColor = System.Drawing.Color.Brown;
             this.panelTeam2Body.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelTeam2Body.Controls.Add(this.pictureBox2);
             this.panelTeam2Body.Controls.Add(this.NextButton);
             this.panelTeam2Body.Controls.Add(this.comboBox_PlayerTwo);
             this.panelTeam2Body.Controls.Add(this.PTwoName);
@@ -226,6 +218,38 @@
             this.panelTeam2Body.Name = "panelTeam2Body";
             this.panelTeam2Body.Size = new System.Drawing.Size(405, 399);
             this.panelTeam2Body.TabIndex = 5;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::MyGracesApp.Properties.Resources.blog_image_ninja_smaller;
+            this.pictureBox2.Location = new System.Drawing.Point(81, 142);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(240, 170);
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExit.Location = new System.Drawing.Point(756, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(55, 36);
+            this.btnExit.TabIndex = 0;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MyGracesApp.Properties.Resources.super_ninja_png;
+            this.pictureBox1.Location = new System.Drawing.Point(68, 155);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(240, 198);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // InitializeTheBeginnig
             // 
@@ -253,6 +277,8 @@
             this.panelTeam1Body.PerformLayout();
             this.panelTeam2Body.ResumeLayout(false);
             this.panelTeam2Body.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -275,5 +301,7 @@
         private System.Windows.Forms.TextBox PTwoName;
         private System.Windows.Forms.ComboBox comboBox_PlayerTwo;
         private System.Windows.Forms.Panel panelTeam2Body;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
