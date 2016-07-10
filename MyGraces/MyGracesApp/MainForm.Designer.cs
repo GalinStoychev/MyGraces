@@ -38,7 +38,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.PlayerOneItemLabel = new System.Windows.Forms.Label();
+            this.PlayerTwoItemLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -151,15 +152,27 @@
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
             // 
-            // label3
+            // PlayerOneItemLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(12, 137);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 29);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "label3";
+            this.PlayerOneItemLabel.AutoSize = true;
+            this.PlayerOneItemLabel.BackColor = System.Drawing.Color.Transparent;
+            this.PlayerOneItemLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
+            this.PlayerOneItemLabel.ForeColor = System.Drawing.Color.White;
+            this.PlayerOneItemLabel.Location = new System.Drawing.Point(12, 169);
+            this.PlayerOneItemLabel.Name = "PlayerOneItemLabel";
+            this.PlayerOneItemLabel.Size = new System.Drawing.Size(0, 26);
+            this.PlayerOneItemLabel.TabIndex = 10;
+            // 
+            // PlayerTwoItemLabel
+            // 
+            this.PlayerTwoItemLabel.AutoSize = true;
+            this.PlayerTwoItemLabel.BackColor = System.Drawing.Color.Transparent;
+            this.PlayerTwoItemLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
+            this.PlayerTwoItemLabel.ForeColor = System.Drawing.Color.White;
+            this.PlayerTwoItemLabel.Location = new System.Drawing.Point(1081, 169);
+            this.PlayerTwoItemLabel.Name = "PlayerTwoItemLabel";
+            this.PlayerTwoItemLabel.Size = new System.Drawing.Size(0, 26);
+            this.PlayerTwoItemLabel.TabIndex = 11;
             // 
             // MainForm
             // 
@@ -168,7 +181,8 @@
             this.AutoSize = true;
             this.BackgroundImage = global::MyGracesApp.Properties.Resources._1palm_beach_and_boats;
             this.ClientSize = new System.Drawing.Size(1282, 708);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.PlayerTwoItemLabel);
+            this.Controls.Add(this.PlayerOneItemLabel);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -203,7 +217,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label PlayerOneItemLabel;
+        private System.Windows.Forms.Label PlayerTwoItemLabel;
     }
 }
 

@@ -30,19 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SkillsAndItemsChoice));
             this.panelTeam2Body = new System.Windows.Forms.Panel();
+            this.ReadyButtonPTwo = new System.Windows.Forms.Button();
+            this.SkillListPTwo = new System.Windows.Forms.CheckedListBox();
             this.NextButton = new System.Windows.Forms.Button();
             this.panelTeam1Body = new System.Windows.Forms.Panel();
+            this.ReadyButtonPOne = new System.Windows.Forms.Button();
+            this.ItemListPOne = new System.Windows.Forms.CheckedListBox();
+            this.SkillListPOne = new System.Windows.Forms.CheckedListBox();
             this.panelSecondTeamName = new System.Windows.Forms.Panel();
             this.panelFirstTeamName = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.SkillListPOne = new System.Windows.Forms.CheckedListBox();
-            this.ItemListPOne = new System.Windows.Forms.CheckedListBox();
-            this.ReadyButtonPOne = new System.Windows.Forms.Button();
             this.POneName = new System.Windows.Forms.Label();
-            this.SkillListPTwo = new System.Windows.Forms.CheckedListBox();
-            this.ReadyButtonPTwo = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.PTwoName = new System.Windows.Forms.Label();
             this.panelTeam2Body.SuspendLayout();
             this.panelTeam1Body.SuspendLayout();
+            this.panelSecondTeamName.SuspendLayout();
             this.panelFirstTeamName.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +60,28 @@
             this.panelTeam2Body.Name = "panelTeam2Body";
             this.panelTeam2Body.Size = new System.Drawing.Size(405, 399);
             this.panelTeam2Body.TabIndex = 11;
+            // 
+            // ReadyButtonPTwo
+            // 
+            this.ReadyButtonPTwo.Location = new System.Drawing.Point(114, 203);
+            this.ReadyButtonPTwo.Name = "ReadyButtonPTwo";
+            this.ReadyButtonPTwo.Size = new System.Drawing.Size(164, 78);
+            this.ReadyButtonPTwo.TabIndex = 2;
+            this.ReadyButtonPTwo.Text = "Ready";
+            this.ReadyButtonPTwo.UseVisualStyleBackColor = true;
+            this.ReadyButtonPTwo.Click += new System.EventHandler(this.ReadyButtonPTwo_Click);
+            // 
+            // SkillListPTwo
+            // 
+            this.SkillListPTwo.FormattingEnabled = true;
+            this.SkillListPTwo.Items.AddRange(new object[] {
+            "Power Mode",
+            "Mesmerize",
+            "Decrease Opponent Energy"});
+            this.SkillListPTwo.Location = new System.Drawing.Point(35, 37);
+            this.SkillListPTwo.Name = "SkillListPTwo";
+            this.SkillListPTwo.Size = new System.Drawing.Size(120, 89);
+            this.SkillListPTwo.TabIndex = 1;
             // 
             // NextButton
             // 
@@ -82,10 +106,45 @@
             this.panelTeam1Body.Size = new System.Drawing.Size(401, 399);
             this.panelTeam1Body.TabIndex = 10;
             // 
+            // ReadyButtonPOne
+            // 
+            this.ReadyButtonPOne.Location = new System.Drawing.Point(100, 203);
+            this.ReadyButtonPOne.Name = "ReadyButtonPOne";
+            this.ReadyButtonPOne.Size = new System.Drawing.Size(158, 85);
+            this.ReadyButtonPOne.TabIndex = 7;
+            this.ReadyButtonPOne.Text = "Ready";
+            this.ReadyButtonPOne.UseVisualStyleBackColor = true;
+            this.ReadyButtonPOne.Click += new System.EventHandler(this.ReadyButtonPOne_Click);
+            // 
+            // ItemListPOne
+            // 
+            this.ItemListPOne.FormattingEnabled = true;
+            this.ItemListPOne.Items.AddRange(new object[] {
+            "Item One",
+            "Item Two",
+            "Item Three",
+            "Item Four",
+            "Item Five"});
+            this.ItemListPOne.Location = new System.Drawing.Point(239, 84);
+            this.ItemListPOne.Name = "ItemListPOne";
+            this.ItemListPOne.Size = new System.Drawing.Size(120, 89);
+            this.ItemListPOne.TabIndex = 6;
+            // 
+            // SkillListPOne
+            // 
+            this.SkillListPOne.FormattingEnabled = true;
+            this.SkillListPOne.Items.AddRange(new object[] {
+            "Power Mode"});
+            this.SkillListPOne.Location = new System.Drawing.Point(18, 46);
+            this.SkillListPOne.Name = "SkillListPOne";
+            this.SkillListPOne.Size = new System.Drawing.Size(120, 89);
+            this.SkillListPOne.TabIndex = 5;
+            // 
             // panelSecondTeamName
             // 
             this.panelSecondTeamName.BackColor = System.Drawing.Color.Red;
             this.panelSecondTeamName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelSecondTeamName.Controls.Add(this.PTwoName);
             this.panelSecondTeamName.Location = new System.Drawing.Point(418, 4);
             this.panelSecondTeamName.Margin = new System.Windows.Forms.Padding(4);
             this.panelSecondTeamName.Name = "panelSecondTeamName";
@@ -103,6 +162,16 @@
             this.panelFirstTeamName.Size = new System.Drawing.Size(404, 82);
             this.panelFirstTeamName.TabIndex = 7;
             // 
+            // POneName
+            // 
+            this.POneName.AutoSize = true;
+            this.POneName.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.POneName.ForeColor = System.Drawing.Color.White;
+            this.POneName.Location = new System.Drawing.Point(103, 7);
+            this.POneName.Name = "POneName";
+            this.POneName.Size = new System.Drawing.Size(0, 58);
+            this.POneName.TabIndex = 1;
+            // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.Transparent;
@@ -116,70 +185,15 @@
             this.btnExit.TabIndex = 6;
             this.btnExit.UseVisualStyleBackColor = false;
             // 
-            // SkillListPOne
+            // PTwoName
             // 
-            this.SkillListPOne.FormattingEnabled = true;
-            this.SkillListPOne.Items.AddRange(new object[] {
-            "Power Mode"});
-            this.SkillListPOne.Location = new System.Drawing.Point(26, 84);
-            this.SkillListPOne.Name = "SkillListPOne";
-            this.SkillListPOne.Size = new System.Drawing.Size(120, 89);
-            this.SkillListPOne.TabIndex = 5;
-            // 
-            // ItemListPOne
-            // 
-            this.ItemListPOne.FormattingEnabled = true;
-            this.ItemListPOne.Items.AddRange(new object[] {
-            "Item One",
-            "Item Two",
-            "Item Three",
-            "Item Four",
-            "Item Five"});
-            this.ItemListPOne.Location = new System.Drawing.Point(239, 84);
-            this.ItemListPOne.Name = "ItemListPOne";
-            this.ItemListPOne.Size = new System.Drawing.Size(120, 89);
-            this.ItemListPOne.TabIndex = 6;
-            // 
-            // ReadyButtonPOne
-            // 
-            this.ReadyButtonPOne.Location = new System.Drawing.Point(113, 246);
-            this.ReadyButtonPOne.Name = "ReadyButtonPOne";
-            this.ReadyButtonPOne.Size = new System.Drawing.Size(158, 85);
-            this.ReadyButtonPOne.TabIndex = 7;
-            this.ReadyButtonPOne.Text = "Ready";
-            this.ReadyButtonPOne.UseVisualStyleBackColor = true;
-            this.ReadyButtonPOne.Click += new System.EventHandler(this.ReadyButtonPOne_Click);
-            // 
-            // POneName
-            // 
-            this.POneName.AutoSize = true;
-            this.POneName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.POneName.Location = new System.Drawing.Point(135, 30);
-            this.POneName.Name = "POneName";
-            this.POneName.Size = new System.Drawing.Size(0, 29);
-            this.POneName.TabIndex = 1;
-            // 
-            // SkillListPTwo
-            // 
-            this.SkillListPTwo.FormattingEnabled = true;
-            this.SkillListPTwo.Items.AddRange(new object[] {
-            "Power Mode",
-            "Mesmerize",
-            "Decrease Opponent Energy"});
-            this.SkillListPTwo.Location = new System.Drawing.Point(35, 37);
-            this.SkillListPTwo.Name = "SkillListPTwo";
-            this.SkillListPTwo.Size = new System.Drawing.Size(120, 89);
-            this.SkillListPTwo.TabIndex = 1;
-            // 
-            // ReadyButtonPTwo
-            // 
-            this.ReadyButtonPTwo.Location = new System.Drawing.Point(114, 203);
-            this.ReadyButtonPTwo.Name = "ReadyButtonPTwo";
-            this.ReadyButtonPTwo.Size = new System.Drawing.Size(164, 78);
-            this.ReadyButtonPTwo.TabIndex = 2;
-            this.ReadyButtonPTwo.Text = "Ready";
-            this.ReadyButtonPTwo.UseVisualStyleBackColor = true;
-            this.ReadyButtonPTwo.Click += new System.EventHandler(this.ReadyButtonPTwo_Click);
+            this.PTwoName.AutoSize = true;
+            this.PTwoName.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PTwoName.ForeColor = System.Drawing.Color.White;
+            this.PTwoName.Location = new System.Drawing.Point(114, 7);
+            this.PTwoName.Name = "PTwoName";
+            this.PTwoName.Size = new System.Drawing.Size(0, 58);
+            this.PTwoName.TabIndex = 2;
             // 
             // SkillsAndItemsChoice
             // 
@@ -195,6 +209,8 @@
             this.Text = "Skills_and_Items_Choice";
             this.panelTeam2Body.ResumeLayout(false);
             this.panelTeam1Body.ResumeLayout(false);
+            this.panelSecondTeamName.ResumeLayout(false);
+            this.panelSecondTeamName.PerformLayout();
             this.panelFirstTeamName.ResumeLayout(false);
             this.panelFirstTeamName.PerformLayout();
             this.ResumeLayout(false);
@@ -215,5 +231,6 @@
         private System.Windows.Forms.Label POneName;
         private System.Windows.Forms.CheckedListBox SkillListPTwo;
         private System.Windows.Forms.Button ReadyButtonPTwo;
+        private System.Windows.Forms.Label PTwoName;
     }
 }

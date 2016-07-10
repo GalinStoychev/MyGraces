@@ -8,7 +8,7 @@
 
     using System.Windows.Forms;
     using Enumerations;
-
+    using System.Text;
     public abstract class Hero : IHeroable
     {
         private int codingSpeed;
@@ -51,7 +51,7 @@
                 try
                 {
                     this.name = value;
-                    if (value.Length < 1 || value.Length > 15)
+                    if (value.Length <= 1 || value.Length > 15)
                     {
                         throw new IvalidNameException("Invalid Name: name must be between 1 and 15 charackters", 1, 15);
                     }
@@ -94,7 +94,7 @@
 
         public int GeTInitialCodingSpeed()
         {
-            return this.Power * this.Energy;
+            return (this.Power * this.Energy) / 10;
         }
 
         public IList<IItemable> Items { get; protected set; }
@@ -119,6 +119,17 @@
         public void AddSkills(ISkillable skillToAdd)
         {
             this.Skills.Add(skillToAdd);
+        }
+
+        public string ShowAllItems()
+        {
+            var allItems = new StringBuilder();
+            foreach (var item in this.Items)
+            {
+                allItems.AppendLine(item.ToString());
+            }
+
+            return allItems.ToString();
         }
     }
 }

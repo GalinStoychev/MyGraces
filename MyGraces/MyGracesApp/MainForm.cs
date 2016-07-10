@@ -30,10 +30,16 @@ namespace MyGracesApp
         {
             IHeroable playerOne = this.NewEngine.AvailableHeroes[0];
             IHeroable playerTwo = this.NewEngine.AvailableHeroes[1];
+
+            // show items
+            PlayerOneItemLabel.Text = playerOne.ShowAllItems();
+            PlayerTwoItemLabel.Text = playerTwo.ShowAllItems();
+
+            // get intial coding speed
             playerOne.CodingSpeed = playerOne.GeTInitialCodingSpeed();
             playerTwo.CodingSpeed = playerTwo.GeTInitialCodingSpeed();
 
-
+            // apply skills and print them
             ISkillable randomSkillOne = GetSkill(playerOne);
             ApplySkill(playerOne, playerTwo, randomSkillOne);
             PrintRandomSkill(randomSkillOne, this.PlayerTwoUsedSKillLabel);
@@ -42,7 +48,7 @@ namespace MyGracesApp
             ApplySkill(playerTwo, playerOne, randomSkillTwo);
             PrintRandomSkill(randomSkillTwo, this.PlayerOneUsedSKillLabel);
 
-
+            // check for end of game
             CheckForEndOfGame(playerOne, playerTwo);
         }
 

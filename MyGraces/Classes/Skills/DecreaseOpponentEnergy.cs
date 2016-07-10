@@ -12,7 +12,7 @@
 
         public override int TrickOpponent(IHeroable opponent)
         {
-            return opponent.Energy - 30;
+            return opponent.Energy - 10;
         }
     }
 }

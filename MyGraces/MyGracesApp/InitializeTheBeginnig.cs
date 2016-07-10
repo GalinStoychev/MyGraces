@@ -50,11 +50,10 @@ namespace MyGracesApp
         private void NextForm_Click(object sender, EventArgs e)
         {
             StartEngine();
-            SkillsAndItemsChoice next = new SkillsAndItemsChoice(this.FirstHeroNameTBox.Text);
+            SkillsAndItemsChoice next = new SkillsAndItemsChoice(this.FirstHeroNameTBox.Text, this.SecondHeroNameTBox.Text);
             next.NewEngine = this.NewEngine;
             this.Hide();
             next.Show();
-           // MessageBox.Show(this.newEngine.HerosList[0]);
         }
 
         public void StartEngine()
@@ -71,5 +70,7 @@ namespace MyGracesApp
             HeroTypes heroTypePlayerTwo = GetHeroType(selectedHeroPlayerTwo);
             this.NewEngine.AddHero(secondHeroName, heroTypePlayerTwo);
         }
+
+        
     }
 }

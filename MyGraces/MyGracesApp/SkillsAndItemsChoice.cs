@@ -15,10 +15,11 @@ namespace MyGracesApp
 {
     public partial class SkillsAndItemsChoice : Form
     {
-        public SkillsAndItemsChoice(string PlayerOneName)
+        public SkillsAndItemsChoice(string PlayerOneName, string PlayerTwoName)
         {
             InitializeComponent();
             POneName.Text = PlayerOneName;
+            PTwoName.Text = PlayerTwoName;
         }
 
         public Engine NewEngine { get; set; }
