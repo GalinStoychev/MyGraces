@@ -6,17 +6,22 @@
     using Skills;
     using Items;
 
-    public class TelerikAcademyDev : Hero, IHeroable
+    public class TelerikAcademyDev : Hero, IHeroable, ICommentable
     {
         public TelerikAcademyDev(string name)
             : base(name)
         {
-            this.Energy = 20;
-            this.Power = 20;
+            this.Energy = 15;
+            this.Power = 9;
 
             // TODO Add basic skills
             this.AddSkills(new DecreaseOpponentEnergy());
             this.AddItems(new Mouse());
+        }
+
+        public string MakeAComment()
+        {
+            return "Work Work Work...";
         }
     }
 }

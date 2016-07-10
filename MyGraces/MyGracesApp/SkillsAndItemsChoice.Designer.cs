@@ -42,6 +42,7 @@
             this.POneName = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.PTwoName = new System.Windows.Forms.Label();
+            this.ItemListPTwo = new System.Windows.Forms.CheckedListBox();
             this.panelTeam2Body.SuspendLayout();
             this.panelTeam1Body.SuspendLayout();
             this.panelSecondTeamName.SuspendLayout();
@@ -53,8 +54,9 @@
             this.panelTeam2Body.BackColor = System.Drawing.Color.Brown;
             this.panelTeam2Body.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelTeam2Body.Controls.Add(this.ReadyButtonPTwo);
-            this.panelTeam2Body.Controls.Add(this.SkillListPTwo);
+            this.panelTeam2Body.Controls.Add(this.ItemListPTwo);
             this.panelTeam2Body.Controls.Add(this.NextButton);
+            this.panelTeam2Body.Controls.Add(this.SkillListPTwo);
             this.panelTeam2Body.Location = new System.Drawing.Point(418, 94);
             this.panelTeam2Body.Margin = new System.Windows.Forms.Padding(4);
             this.panelTeam2Body.Name = "panelTeam2Body";
@@ -63,34 +65,44 @@
             // 
             // ReadyButtonPTwo
             // 
-            this.ReadyButtonPTwo.Location = new System.Drawing.Point(114, 203);
+            this.ReadyButtonPTwo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.ReadyButtonPTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ReadyButtonPTwo.ForeColor = System.Drawing.Color.White;
+            this.ReadyButtonPTwo.Location = new System.Drawing.Point(101, 227);
             this.ReadyButtonPTwo.Name = "ReadyButtonPTwo";
-            this.ReadyButtonPTwo.Size = new System.Drawing.Size(164, 78);
+            this.ReadyButtonPTwo.Size = new System.Drawing.Size(197, 73);
             this.ReadyButtonPTwo.TabIndex = 2;
             this.ReadyButtonPTwo.Text = "Ready";
-            this.ReadyButtonPTwo.UseVisualStyleBackColor = true;
+            this.ReadyButtonPTwo.UseVisualStyleBackColor = false;
             this.ReadyButtonPTwo.Click += new System.EventHandler(this.ReadyButtonPTwo_Click);
             // 
             // SkillListPTwo
             // 
+            this.SkillListPTwo.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.SkillListPTwo.CheckOnClick = true;
+            this.SkillListPTwo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SkillListPTwo.FormattingEnabled = true;
             this.SkillListPTwo.Items.AddRange(new object[] {
             "Power Mode",
             "Mesmerize",
-            "Decrease Opponent Energy"});
-            this.SkillListPTwo.Location = new System.Drawing.Point(35, 37);
+            "Decrease Opponent Energy",
+            "Energy Mode"});
+            this.SkillListPTwo.Location = new System.Drawing.Point(3, 5);
             this.SkillListPTwo.Name = "SkillListPTwo";
-            this.SkillListPTwo.Size = new System.Drawing.Size(120, 89);
+            this.SkillListPTwo.Size = new System.Drawing.Size(391, 106);
             this.SkillListPTwo.TabIndex = 1;
             // 
             // NextButton
             // 
-            this.NextButton.Location = new System.Drawing.Point(60, 312);
+            this.NextButton.BackColor = System.Drawing.Color.OliveDrab;
+            this.NextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NextButton.ForeColor = System.Drawing.Color.White;
+            this.NextButton.Location = new System.Drawing.Point(240, 322);
             this.NextButton.Name = "NextButton";
-            this.NextButton.Size = new System.Drawing.Size(240, 74);
+            this.NextButton.Size = new System.Drawing.Size(154, 64);
             this.NextButton.TabIndex = 0;
             this.NextButton.Text = "Next";
-            this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.UseVisualStyleBackColor = false;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // panelTeam1Body
@@ -108,36 +120,48 @@
             // 
             // ReadyButtonPOne
             // 
-            this.ReadyButtonPOne.Location = new System.Drawing.Point(100, 203);
+            this.ReadyButtonPOne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.ReadyButtonPOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.ReadyButtonPOne.ForeColor = System.Drawing.Color.White;
+            this.ReadyButtonPOne.Location = new System.Drawing.Point(91, 227);
             this.ReadyButtonPOne.Name = "ReadyButtonPOne";
-            this.ReadyButtonPOne.Size = new System.Drawing.Size(158, 85);
+            this.ReadyButtonPOne.Size = new System.Drawing.Size(197, 73);
             this.ReadyButtonPOne.TabIndex = 7;
             this.ReadyButtonPOne.Text = "Ready";
-            this.ReadyButtonPOne.UseVisualStyleBackColor = true;
+            this.ReadyButtonPOne.UseVisualStyleBackColor = false;
             this.ReadyButtonPOne.Click += new System.EventHandler(this.ReadyButtonPOne_Click);
             // 
             // ItemListPOne
             // 
+            this.ItemListPOne.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.ItemListPOne.CheckOnClick = true;
+            this.ItemListPOne.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ItemListPOne.FormattingEnabled = true;
             this.ItemListPOne.Items.AddRange(new object[] {
-            "Item One",
-            "Item Two",
-            "Item Three",
-            "Item Four",
-            "Item Five"});
-            this.ItemListPOne.Location = new System.Drawing.Point(239, 84);
+            "Anti Glear Screen",
+            "Coffee",
+            "External Keyboard",
+            "Mouse"});
+            this.ItemListPOne.Location = new System.Drawing.Point(5, 117);
             this.ItemListPOne.Name = "ItemListPOne";
-            this.ItemListPOne.Size = new System.Drawing.Size(120, 89);
+            this.ItemListPOne.Size = new System.Drawing.Size(384, 104);
             this.ItemListPOne.TabIndex = 6;
             // 
             // SkillListPOne
             // 
+            this.SkillListPOne.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.SkillListPOne.CheckOnClick = true;
+            this.SkillListPOne.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SkillListPOne.FormattingEnabled = true;
             this.SkillListPOne.Items.AddRange(new object[] {
-            "Power Mode"});
-            this.SkillListPOne.Location = new System.Drawing.Point(18, 46);
+            "Power Mode",
+            "Mesmerize",
+            "Decrease Opponent Energy",
+            "Energy Mode"});
+            this.SkillListPOne.Location = new System.Drawing.Point(5, 5);
+            this.SkillListPOne.Margin = new System.Windows.Forms.Padding(5);
             this.SkillListPOne.Name = "SkillListPOne";
-            this.SkillListPOne.Size = new System.Drawing.Size(120, 89);
+            this.SkillListPOne.Size = new System.Drawing.Size(384, 104);
             this.SkillListPOne.TabIndex = 5;
             // 
             // panelSecondTeamName
@@ -195,6 +219,22 @@
             this.PTwoName.Size = new System.Drawing.Size(0, 58);
             this.PTwoName.TabIndex = 2;
             // 
+            // ItemListPTwo
+            // 
+            this.ItemListPTwo.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.ItemListPTwo.CheckOnClick = true;
+            this.ItemListPTwo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ItemListPTwo.FormattingEnabled = true;
+            this.ItemListPTwo.Items.AddRange(new object[] {
+            "Anti Glear Screen",
+            "Coffee",
+            "External Keyboard",
+            "Mouse"});
+            this.ItemListPTwo.Location = new System.Drawing.Point(3, 117);
+            this.ItemListPTwo.Name = "ItemListPTwo";
+            this.ItemListPTwo.Size = new System.Drawing.Size(391, 104);
+            this.ItemListPTwo.TabIndex = 7;
+            // 
             // SkillsAndItemsChoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -206,6 +246,7 @@
             this.Controls.Add(this.panelFirstTeamName);
             this.Controls.Add(this.btnExit);
             this.Name = "SkillsAndItemsChoice";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Skills_and_Items_Choice";
             this.panelTeam2Body.ResumeLayout(false);
             this.panelTeam1Body.ResumeLayout(false);
@@ -232,5 +273,6 @@
         private System.Windows.Forms.CheckedListBox SkillListPTwo;
         private System.Windows.Forms.Button ReadyButtonPTwo;
         private System.Windows.Forms.Label PTwoName;
+        private System.Windows.Forms.CheckedListBox ItemListPTwo;
     }
 }

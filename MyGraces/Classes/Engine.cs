@@ -23,8 +23,8 @@
             var hero = this.factory.CreateAHero(name, type);
             this.AvailableHeroes.Add(hero);
         }
-        // Adding Skills
 
+        // Adding Skills
         public void AddSkill(ISkillable skillToAdd, IHeroable hero)
         {
             hero.AddSkills(skillToAdd);
@@ -39,7 +39,7 @@
         // Get Hero by Name
         public IHeroable GetHeroByName(string name)
         {
-           return this.AvailableHeroes.FirstOrDefault(x => x.Name == name);
+            return this.AvailableHeroes.FirstOrDefault(x => x.Name == name);
         }
     }
 }

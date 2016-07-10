@@ -3,16 +3,16 @@
     using Enumerations;
     using Interfaces;
 
-    public class PowerMode : Skill, ISkillable
+   public class EnergyMode : Skill, ISkillable
     {
-        public PowerMode()
+        public EnergyMode()
         {
             this.Type = SkillType.CodeImprovingSkill;
         }
 
         public override int ImproveCode(IHeroable hero)
         {
-            return hero.Power;
+            return hero.Energy;
         }
     }
 }

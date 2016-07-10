@@ -43,8 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CozyDev.cs" />
-    <Compile Include="Draw.cs" />
     <Compile Include="Engine.cs" />
+    <Compile Include="Items\AntiGlearScreen.cs" />
     <Compile Include="Items\Coffee.cs" />
     <Compile Include="Items\ExternalKeyboard.cs" />
     <Compile Include="Items\Item.cs" />
@@ -55,6 +55,7 @@
     <Compile Include="HeroFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Skills\DecreaseOpponentEnergy.cs" />
+    <Compile Include="Skills\EnergyMode.cs" />
     <Compile Include="Skills\Mesmerize.cs" />
     <Compile Include="Skills\PowerMode.cs" />
     <Compile Include="Skills\Skill.cs" />

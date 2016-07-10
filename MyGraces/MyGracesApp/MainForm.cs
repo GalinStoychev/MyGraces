@@ -1,27 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Classes;
-using Interfaces;
-using Enumerations;
-
-namespace MyGracesApp
+﻿namespace MyGracesApp
 {
+    using System;
+    using System.ComponentModel;
+    using System.Windows.Forms;
+    using Classes;
+    using Interfaces;
+    using Enumerations;
+
     public partial class MainForm : Form
     {
+        private const int MaxLines = 1000;
         private Random generator = new Random();
 
-        public MainForm()
+        public MainForm(string PlayerOneName, string PlayerTwoName)
         {
             InitializeComponent();
-            this.PlayerOnePBar.Maximum = 1500;
-            this.PlayerTwoPBar.Maximum = 1500;
+            POneName.Text = PlayerOneName;
+            PTwoName.Text = PlayerTwoName;
+            this.PlayerOnePBar.Maximum = MaxLines;
+            this.PlayerTwoPBar.Maximum = MaxLines;
         }
 
         public Engine NewEngine { get; set; }
@@ -30,26 +27,50 @@ namespace MyGracesApp
         {
             IHeroable playerOne = this.NewEngine.AvailableHeroes[0];
             IHeroable playerTwo = this.NewEngine.AvailableHeroes[1];
-
-            // show items
-            PlayerOneItemLabel.Text = playerOne.ShowAllItems();
-            PlayerTwoItemLabel.Text = playerTwo.ShowAllItems();
-
+            
             // get intial coding speed
             playerOne.CodingSpeed = playerOne.GeTInitialCodingSpeed();
             playerTwo.CodingSpeed = playerTwo.GeTInitialCodingSpeed();
 
-            // apply skills and print them
+            // apply skills
             ISkillable randomSkillOne = GetSkill(playerOne);
             ApplySkill(playerOne, playerTwo, randomSkillOne);
-            PrintRandomSkill(randomSkillOne, this.PlayerTwoUsedSKillLabel);
-
+            
             ISkillable randomSkillTwo = GetSkill(playerTwo);
             ApplySkill(playerTwo, playerOne, randomSkillTwo);
+
+            // print skills
+            PrintRandomSkill(randomSkillOne, this.PlayerTwoUsedSKillLabel);
             PrintRandomSkill(randomSkillTwo, this.PlayerOneUsedSKillLabel);
+            
+            // print current Coding speed
+            PlayerOneCodingSpeed.Text = "+" + playerOne.CodingSpeed.ToString();
+            PlayerTwoCodingSpeed.Text = "+" + playerTwo.CodingSpeed.ToString();
+
+            // print comments
+            MakeAComment(playerOne, this.PlayerOneComment);
+            MakeAComment(playerTwo, this.PlayerTwoComment);
+
+            // Print items
+            PlayerOneItemLabel.Text = playerOne.ShowAllItems();
+            PlayerTwoItemLabel.Text = playerTwo.ShowAllItems();
 
             // check for end of game
             CheckForEndOfGame(playerOne, playerTwo);
+        }
+
+        private void MakeAComment(IHeroable hero, Label label)
+        {
+            if (hero is TelerikAcademyDev)
+            {
+                TelerikAcademyDev developer = hero as TelerikAcademyDev;
+                label.Text = developer.MakeAComment();
+            }
+            else if (hero is CozyDev)
+            {
+                CozyDev developer = hero as CozyDev;
+                label.Text = developer.MakeAComment();
+            }
         }
 
         private ISkillable GetSkill(IHeroable hero)
@@ -85,20 +106,20 @@ namespace MyGracesApp
             int increasedProgressBarPlayerOne = this.PlayerOnePBar.Value + playerOne.CodingSpeed;
             int increasedProgressBarPlayerTwo = this.PlayerTwoPBar.Value + playerTwo.CodingSpeed;
 
-            if (increasedProgressBarPlayerOne > 1500 && increasedProgressBarPlayerTwo > 1500)
+            if (increasedProgressBarPlayerOne > MaxLines && increasedProgressBarPlayerTwo > MaxLines)
             {
-                this.PlayerOnePBar.Value = 1500;
-                this.PlayerTwoPBar.Value = 1500;
+                this.PlayerOnePBar.Value = MaxLines;
+                this.PlayerTwoPBar.Value = MaxLines;
                 MessageBox.Show("Draw");
             }
-            else if (increasedProgressBarPlayerOne > 1500)
+            else if (increasedProgressBarPlayerOne > MaxLines)
             {
-                this.PlayerTwoPBar.Value = 1500;
+                this.PlayerTwoPBar.Value = MaxLines;
                 MessageBox.Show("Winner is Player Two");
             }
-            else if (increasedProgressBarPlayerTwo > 1500)
+            else if (increasedProgressBarPlayerTwo > MaxLines)
             {
-                this.PlayerOnePBar.Value = 1500;
+                this.PlayerOnePBar.Value = MaxLines;
                 MessageBox.Show("Winner is Player One");
             }
             else

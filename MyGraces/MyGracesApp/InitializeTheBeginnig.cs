@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Classes;
-using Enumerations;
-
-namespace MyGracesApp
+﻿namespace MyGracesApp
 {
+    using System;
+    using System.ComponentModel;
+    using System.Windows.Forms;
+    using Classes;
+    using Enumerations;
+
     public partial class InitializeTheBeginnig : Form
     {
         public InitializeTheBeginnig()
@@ -22,20 +16,10 @@ namespace MyGracesApp
 
         public Engine NewEngine { get; }
 
-        private HeroTypes GetHeroType(string selectedHero)
-        {
-            switch (selectedHero)
-            {
-                case "Hack Dev": return HeroTypes.HackDev;
-                case "Cozy Dev": return HeroTypes.CozyDev;
-                case "Teleric Academy Dev": return HeroTypes.TelerikAcademyDev;
-                default: throw new ArgumentException("There is no such a hero type");
-            }
-        }
-
+        // Button Exit
         private void btnExit_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Do you really want to exit ?", "Exit", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Do you really want to exit?", "Exit", MessageBoxButtons.YesNo);
 
             if (dialogResult == DialogResult.Yes)
             {
@@ -47,30 +31,42 @@ namespace MyGracesApp
             }
         }
 
-        private void NextForm_Click(object sender, EventArgs e)
-        {
-            StartEngine();
-            SkillsAndItemsChoice next = new SkillsAndItemsChoice(this.FirstHeroNameTBox.Text, this.SecondHeroNameTBox.Text);
-            next.NewEngine = this.NewEngine;
-            this.Hide();
-            next.Show();
-        }
-
+        // Add heroes
         public void StartEngine()
         {
             // Add Hero One
-            string firstHeroName = this.FirstHeroNameTBox.Text;
+            string firstHeroName = this.POneName.Text;
             string selectedHeroPlayerOne = this.comboBox_PlayerOne.Text;
             HeroTypes heroTypePlayerOne = GetHeroType(selectedHeroPlayerOne);
             this.NewEngine.AddHero(firstHeroName, heroTypePlayerOne);
 
             // Add Hero Two
-            string secondHeroName = this.SecondHeroNameTBox.Text;
+            string secondHeroName = this.PTwoName.Text;
             string selectedHeroPlayerTwo = this.comboBox_PlayerTwo.Text;
             HeroTypes heroTypePlayerTwo = GetHeroType(selectedHeroPlayerTwo);
             this.NewEngine.AddHero(secondHeroName, heroTypePlayerTwo);
         }
 
-        
+        // Hero types
+        private HeroTypes GetHeroType(string selectedHero)
+        {
+            switch (selectedHero)
+            {
+                case "Hack Dev": return HeroTypes.HackDev;
+                case "Cozy Dev": return HeroTypes.CozyDev;
+                case "Teleric Academy Dev": return HeroTypes.TelerikAcademyDev;
+                default: throw new ArgumentException("There is no such a hero type");
+            }
+        }
+
+        // Go to next form
+        private void NextForm_Click(object sender, EventArgs e)
+        {
+            StartEngine();
+            SkillsAndItemsChoice next = new SkillsAndItemsChoice(this.POneName.Text, this.PTwoName.Text);
+            next.NewEngine = this.NewEngine;
+            this.Hide();
+            next.Show();
+        }
     }
 }

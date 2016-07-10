@@ -6,7 +6,7 @@
     using Skills;
     using Items;
 
-    public class CozyDev : Hero, IHeroable
+    public class CozyDev : Hero, IHeroable, ICommentable
     {
         public CozyDev(string name)
             : base(name)
@@ -17,6 +17,11 @@
             // TODO Add basic skills
             this.AddSkills(new Mesmerize());
             this.AddItems(new ExternalKeyboard());
+        }
+
+        public string MakeAComment()
+        {
+            return "Viva la revolucion";
         }
     }
 }

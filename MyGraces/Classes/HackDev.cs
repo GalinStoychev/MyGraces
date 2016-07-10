@@ -11,8 +11,8 @@
         public HackDev(string name)
           : base(name)
         {
-            this.Energy = 7;
-            this.Power = 20;
+            this.Energy = 3;
+            this.Power = 18;
 
             // TODO Add basic skills
             this.AddSkills(new PowerMode());

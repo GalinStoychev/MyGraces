@@ -37,11 +37,11 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.panelTeam1Body = new System.Windows.Forms.Panel();
             this.comboBox_PlayerOne = new System.Windows.Forms.ComboBox();
-            this.FirstHeroNameTBox = new System.Windows.Forms.TextBox();
+            this.POneName = new System.Windows.Forms.TextBox();
             this.PlayerOneLabel = new System.Windows.Forms.Label();
             this.PlayerTwoLabel = new System.Windows.Forms.Label();
             this.NextButton = new System.Windows.Forms.Button();
-            this.SecondHeroNameTBox = new System.Windows.Forms.TextBox();
+            this.PTwoName = new System.Windows.Forms.TextBox();
             this.comboBox_PlayerTwo = new System.Windows.Forms.ComboBox();
             this.panelTeam2Body = new System.Windows.Forms.Panel();
             this.panelFirstTeamName.SuspendLayout();
@@ -126,7 +126,7 @@
             this.panelTeam1Body.BackColor = System.Drawing.Color.SteelBlue;
             this.panelTeam1Body.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelTeam1Body.Controls.Add(this.comboBox_PlayerOne);
-            this.panelTeam1Body.Controls.Add(this.FirstHeroNameTBox);
+            this.panelTeam1Body.Controls.Add(this.POneName);
             this.panelTeam1Body.Location = new System.Drawing.Point(5, 150);
             this.panelTeam1Body.Margin = new System.Windows.Forms.Padding(4);
             this.panelTeam1Body.Name = "panelTeam1Body";
@@ -146,14 +146,14 @@
             this.comboBox_PlayerOne.Size = new System.Drawing.Size(160, 37);
             this.comboBox_PlayerOne.TabIndex = 3;
             // 
-            // FirstHeroNameTBox
+            // POneName
             // 
-            this.FirstHeroNameTBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FirstHeroNameTBox.Location = new System.Drawing.Point(68, 17);
-            this.FirstHeroNameTBox.Multiline = true;
-            this.FirstHeroNameTBox.Name = "FirstHeroNameTBox";
-            this.FirstHeroNameTBox.Size = new System.Drawing.Size(240, 40);
-            this.FirstHeroNameTBox.TabIndex = 2;
+            this.POneName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.POneName.Location = new System.Drawing.Point(68, 17);
+            this.POneName.Multiline = true;
+            this.POneName.Name = "POneName";
+            this.POneName.Size = new System.Drawing.Size(240, 40);
+            this.POneName.TabIndex = 2;
             // 
             // PlayerOneLabel
             // 
@@ -192,14 +192,14 @@
             this.NextButton.UseVisualStyleBackColor = false;
             this.NextButton.Click += new System.EventHandler(this.NextForm_Click);
             // 
-            // SecondHeroNameTBox
+            // PTwoName
             // 
-            this.SecondHeroNameTBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SecondHeroNameTBox.Location = new System.Drawing.Point(81, 17);
-            this.SecondHeroNameTBox.Multiline = true;
-            this.SecondHeroNameTBox.Name = "SecondHeroNameTBox";
-            this.SecondHeroNameTBox.Size = new System.Drawing.Size(240, 40);
-            this.SecondHeroNameTBox.TabIndex = 4;
+            this.PTwoName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PTwoName.Location = new System.Drawing.Point(81, 17);
+            this.PTwoName.Multiline = true;
+            this.PTwoName.Name = "PTwoName";
+            this.PTwoName.Size = new System.Drawing.Size(240, 40);
+            this.PTwoName.TabIndex = 4;
             // 
             // comboBox_PlayerTwo
             // 
@@ -220,7 +220,7 @@
             this.panelTeam2Body.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelTeam2Body.Controls.Add(this.NextButton);
             this.panelTeam2Body.Controls.Add(this.comboBox_PlayerTwo);
-            this.panelTeam2Body.Controls.Add(this.SecondHeroNameTBox);
+            this.panelTeam2Body.Controls.Add(this.PTwoName);
             this.panelTeam2Body.Location = new System.Drawing.Point(419, 150);
             this.panelTeam2Body.Margin = new System.Windows.Forms.Padding(4);
             this.panelTeam2Body.Name = "panelTeam2Body";
@@ -267,12 +267,12 @@
         private System.Windows.Forms.Label lblCaption;
         private System.Windows.Forms.Panel panelTeam1Body;
         private System.Windows.Forms.Label HeroNameToEnter;
-        private System.Windows.Forms.TextBox FirstHeroNameTBox;
+        private System.Windows.Forms.TextBox POneName;
         private System.Windows.Forms.ComboBox comboBox_PlayerOne;
         private System.Windows.Forms.Label PlayerOneLabel;
         private System.Windows.Forms.Label PlayerTwoLabel;
         private System.Windows.Forms.Button NextButton;
-        private System.Windows.Forms.TextBox SecondHeroNameTBox;
+        private System.Windows.Forms.TextBox PTwoName;
         private System.Windows.Forms.ComboBox comboBox_PlayerTwo;
         private System.Windows.Forms.Panel panelTeam2Body;
     }

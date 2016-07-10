@@ -101,16 +101,6 @@
 
         public List<ISkillable> Skills { get; protected set; }
 
-        //public void CalculateSkillEffect()
-        //{
-        //    // TODO Change Energy, Power... Temporarely
-        //}
-
-        //public void CalculateItemEffect()
-        //{
-        //    // TODO Change Energy, Power... permanently
-        //}
-
         public void AddItems(IItemable itemToAdd)
         {
             this.Items.Add(itemToAdd);

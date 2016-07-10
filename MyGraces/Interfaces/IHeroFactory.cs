@@ -1,9 +1,7 @@
-﻿using Enumerations;
-using System;
-using System.Collections.Generic;
-
-namespace Interfaces
+﻿namespace Interfaces
 {
+    using Enumerations;
+
     public interface IHeroFactory
     {
         IHeroable CreateAHero(string name, HeroTypes type);
