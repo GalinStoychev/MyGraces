@@ -312,7 +312,6 @@
             this.panelFirstTeamName.ResumeLayout(false);
             this.panelFirstTeamName.PerformLayout();
             this.ResumeLayout(false);
-
         }
 
         #endregion

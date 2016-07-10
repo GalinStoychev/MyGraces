@@ -23,29 +23,29 @@
 
         public Engine NewEngine { get; set; }
 
-        private void StartFight()
+        private void StartCoding()
         {
             IHeroable playerOne = this.NewEngine.AvailableHeroes[0];
             IHeroable playerTwo = this.NewEngine.AvailableHeroes[1];
-            
+
             // get intial coding speed
             playerOne.CodingSpeed = playerOne.GeTInitialCodingSpeed();
             playerTwo.CodingSpeed = playerTwo.GeTInitialCodingSpeed();
-
+            
             // apply skills
             ISkillable randomSkillOne = GetSkill(playerOne);
             ApplySkill(playerOne, playerTwo, randomSkillOne);
-            
+
             ISkillable randomSkillTwo = GetSkill(playerTwo);
-            ApplySkill(playerTwo, playerOne, randomSkillTwo);
+              ApplySkill(playerTwo, playerOne, randomSkillTwo);
 
             // print skills
             PrintRandomSkill(randomSkillOne, this.PlayerTwoUsedSKillLabel);
             PrintRandomSkill(randomSkillTwo, this.PlayerOneUsedSKillLabel);
-            
+
             // print current Coding speed
-            PlayerOneCodingSpeed.Text = "+" + playerOne.CodingSpeed.ToString();
-            PlayerTwoCodingSpeed.Text = "+" + playerTwo.CodingSpeed.ToString();
+            PlayerOneCodingSpeed.Text = "+" + playerOne.CodingSpeed.ToString() + " lines";
+            PlayerTwoCodingSpeed.Text = "+" + playerTwo.CodingSpeed.ToString() + " lines";
 
             // print comments
             MakeAComment(playerOne, this.PlayerOneComment);
@@ -131,7 +131,7 @@
 
         private void FightButton_Click(object sender, EventArgs e)
         {
-            StartFight();
+            StartCoding();
         }
     }
 }

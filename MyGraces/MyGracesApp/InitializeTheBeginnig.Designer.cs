@@ -126,7 +126,7 @@
             // 
             // comboBox_PlayerOne
             // 
-            this.comboBox_PlayerOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox_PlayerOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.comboBox_PlayerOne.FormattingEnabled = true;
             this.comboBox_PlayerOne.Items.AddRange(new object[] {
             "Cozy Dev",
@@ -134,7 +134,7 @@
             "Teleric Academy Dev"});
             this.comboBox_PlayerOne.Location = new System.Drawing.Point(68, 82);
             this.comboBox_PlayerOne.Name = "comboBox_PlayerOne";
-            this.comboBox_PlayerOne.Size = new System.Drawing.Size(240, 37);
+            this.comboBox_PlayerOne.Size = new System.Drawing.Size(240, 33);
             this.comboBox_PlayerOne.TabIndex = 3;
             // 
             // POneName
@@ -194,7 +194,7 @@
             // 
             // comboBox_PlayerTwo
             // 
-            this.comboBox_PlayerTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox_PlayerTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.comboBox_PlayerTwo.FormattingEnabled = true;
             this.comboBox_PlayerTwo.Items.AddRange(new object[] {
             "Cozy Dev",
@@ -202,7 +202,7 @@
             "Teleric Academy Dev"});
             this.comboBox_PlayerTwo.Location = new System.Drawing.Point(81, 82);
             this.comboBox_PlayerTwo.Name = "comboBox_PlayerTwo";
-            this.comboBox_PlayerTwo.Size = new System.Drawing.Size(240, 37);
+            this.comboBox_PlayerTwo.Size = new System.Drawing.Size(240, 33);
             this.comboBox_PlayerTwo.TabIndex = 5;
             // 
             // panelTeam2Body
