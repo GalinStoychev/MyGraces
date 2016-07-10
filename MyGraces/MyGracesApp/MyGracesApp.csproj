@@ -58,6 +58,12 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SkillsAndItemsChoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkillsAndItemsChoice.Designer.cs">
+      <DependentUpon>SkillsAndItemsChoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="StartApp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="InitializeTheBeginnig.resx">
@@ -76,6 +82,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SkillsAndItemsChoice.resx">
+      <DependentUpon>SkillsAndItemsChoice.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -98,9 +107,28 @@
       <Project>{c27f9f4d-5368-4ae0-ae1e-3319ed98c29b}</Project>
       <Name>EnumerationsAndStructs</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
+      <Project>{D637DA79-6559-4ADB-80EC-B8E1485B4631}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1palm-beach-and-boats.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\matrix.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\super_ninja-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blog_image-ninja.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

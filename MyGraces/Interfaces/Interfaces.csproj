@@ -43,9 +43,16 @@
     <Compile Include="ICommentable.cs" />
     <Compile Include="IDrawable.cs" />
     <Compile Include="IHeroable.cs" />
+    <Compile Include="IHeroFactory.cs" />
     <Compile Include="IItemable.cs" />
     <Compile Include="ISkillable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Enumerations\EnumerationsAndStructs.csproj">
+      <Project>{C27F9F4D-5368-4AE0-AE1E-3319ED98C29B}</Project>
+      <Name>EnumerationsAndStructs</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

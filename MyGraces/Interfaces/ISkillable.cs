@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Enumerations;
 
 namespace Interfaces
 {
-    interface ISkillable
+    public interface ISkillable
     {
+        SkillType Type { get; }
+
+         int ImproveCode(IHeroable hero);
+
+         int TrickOpponent(IHeroable opponent);
     }
 }

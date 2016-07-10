@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Classes;
+using Enumerations;
 
 namespace MyGracesApp
 {
@@ -15,6 +17,20 @@ namespace MyGracesApp
         public InitializeTheBeginnig()
         {
             InitializeComponent();
+            this.NewEngine = new Engine();
+        }
+
+        public Engine NewEngine { get; }
+
+        private HeroTypes GetHeroType(string selectedHero)
+        {
+            switch (selectedHero)
+            {
+                case "Hack Dev": return HeroTypes.HackDev;
+                case "Cozy Dev": return HeroTypes.CozyDev;
+                case "Teleric Academy Dev": return HeroTypes.TelerikAcademyDev;
+                default: throw new ArgumentException("There is no such a hero type");
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -31,24 +47,35 @@ namespace MyGracesApp
             }
         }
 
-        private void rbtn1Player_CheckedChanged(object sender, EventArgs e)
-        {
-            txtPlayer1Name2.Enabled = false;
-            txtPlayer2Name.Enabled = false;
-            txtPlayer1Name.Enabled = true;
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    // MessageBox.Show(this.FirstHeroNameTBox.Text);
 
-            txtPlayer1Name.ForeColor = Color.Black;
+        //}
+
+        private void NextForm_Click(object sender, EventArgs e)
+        {
+            StartEngine();
+            SkillsAndItemsChoice next = new SkillsAndItemsChoice(this.FirstHeroNameTBox.Text);
+            next.NewEngine = this.NewEngine;
+            this.Hide();
+            next.Show();
+           // MessageBox.Show(this.newEngine.HerosList[0]);
         }
 
-        private void rbtn2Players_CheckedChanged(object sender, EventArgs e)
+        public void StartEngine()
         {
+            // Add Hero One
+            string firstHeroName = this.FirstHeroNameTBox.Text;
+            string selectedHeroPlayerOne = this.comboBox_PlayerOne.Text;
+            HeroTypes heroTypePlayerOne = GetHeroType(selectedHeroPlayerOne);
+            this.NewEngine.AddHero(firstHeroName, heroTypePlayerOne);
 
-            txtPlayer1Name2.Enabled = true;
-            txtPlayer2Name.Enabled = true;
-            txtPlayer1Name.Enabled = false;
-
-            txtPlayer1Name2.ForeColor = Color.Black;
-            txtPlayer2Name.ForeColor = Color.Black;
+            // Add Hero Two
+            string secondHeroName = this.SecondHeroNameTBox.Text;
+            string selectedHeroPlayerTwo = this.comboBox_PlayerTwo.Text;
+            HeroTypes heroTypePlayerTwo = GetHeroType(selectedHeroPlayerTwo);
+            this.NewEngine.AddHero(secondHeroName, heroTypePlayerTwo);
         }
     }
 }
