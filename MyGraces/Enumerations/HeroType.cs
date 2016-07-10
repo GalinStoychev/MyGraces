@@ -8,8 +8,8 @@ namespace Enumerations
 {
     public enum HeroTypes
     {
-        Warrior = 1,
-        Mage = 2,
-        Hunter = 3
+        CozyDev = 1,
+        HackDev = 2,
+        TelerikAcademyDev = 3
     }
 }
