@@ -11,7 +11,7 @@
         public CozyDev(string name)
             : base(name)
         {
-            this.Energy = 10;
+            this.Energy = 11;
             this.Power = 10;
 
             this.AddSkills(new Mesmerize());

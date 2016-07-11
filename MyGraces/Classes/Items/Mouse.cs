@@ -7,7 +7,7 @@
         public Mouse()
         {
             this.Name = "Mouse";
-            this.PowerBonus = 5;
+            this.PowerBonus = 6;
         }
     }
 }
