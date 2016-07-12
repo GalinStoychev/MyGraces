@@ -31,13 +31,13 @@
             // get intial coding speed
             playerOne.CodingSpeed = playerOne.GeTInitialCodingSpeed();
             playerTwo.CodingSpeed = playerTwo.GeTInitialCodingSpeed();
-            
+
             // apply skills
             ISkillable randomSkillOne = GetSkill(playerOne);
             ApplySkill(playerOne, playerTwo, randomSkillOne);
 
             ISkillable randomSkillTwo = GetSkill(playerTwo);
-              ApplySkill(playerTwo, playerOne, randomSkillTwo);
+            ApplySkill(playerTwo, playerOne, randomSkillTwo);
 
             // print skills
             PrintRandomSkill(randomSkillOne, this.PlayerTwoUsedSKillLabel);

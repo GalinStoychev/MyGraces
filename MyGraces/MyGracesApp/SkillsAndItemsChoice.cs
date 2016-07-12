@@ -6,8 +6,8 @@
     using System.Windows.Forms;
     using Classes;
     using Classes.Skills;
-    using Interfaces;
     using Classes.Items;
+    using Interfaces;
 
     public partial class SkillsAndItemsChoice : Form
     {

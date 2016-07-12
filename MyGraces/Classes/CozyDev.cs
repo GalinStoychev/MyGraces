@@ -5,7 +5,7 @@
     using Interfaces;
     using Skills;
     using Items;
-
+    
     public class CozyDev : Hero, IHeroable, ICommentable
     {
         public CozyDev(string name)
