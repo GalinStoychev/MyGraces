@@ -10,4 +10,9 @@ Team Members :
 
 ## Project Purpose 
 
-To make a PvP game simulating a coding competiotion
+To make a PvP game simulating a coding competiotion.
+
+## The game includes:
+- 3 types of heroes/developers
+- 4 types of skills
+- 4 types og items
